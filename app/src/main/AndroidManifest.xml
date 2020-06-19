@@ -2,17 +2,21 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.emrhmrc.kioskdemo">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_securty_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.home.HomeActivity">
-
-        </activity>
-        <activity android:name=".ui.splash.SplashActivity"
+        <activity android:name=".ui.payment.FoodListActivity"></activity>
+        <activity android:name=".ui.home.HomeActivity"></activity>
+        <activity
+            android:name=".ui.splash.SplashActivity"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,6 +24,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ui.payment.PaymentCardDetails" />
+        <activity android:name=".ui.food.FoodActivity" />
     </application>
 
 </manifest>
