@@ -1,6 +1,7 @@
 package com.emrhmrc.kioskdemo.ui.food;
 
 import android.content.Intent;
+import android.widget.NumberPicker;
 
 import androidx.viewbinding.ViewBinding;
 
@@ -10,16 +11,17 @@ import com.emrhmrc.kioskdemo.R;
 import com.emrhmrc.kioskdemo.base.BaseActivity;
 import com.emrhmrc.kioskdemo.databinding.ActivityFoodBinding;
 import com.emrhmrc.kioskdemo.models.FoodModel;
-import com.emrhmrc.kioskdemo.ui.payment.FoodListActivity;
-import com.emrhmrc.kioskdemo.ui.payment.PaymentCardDetails;
+import com.emrhmrc.sweetdialoglib.DialogCreater;
 
 /**
  * Created by hamurcuabi on 19,June,2020
  **/
-public class FoodActivity extends BaseActivity implements IOnItemClickListener<FoodModel> {
+public class FoodActivity extends BaseActivity implements IOnItemClickListener<FoodModel>, NumberPicker.OnValueChangeListener {
 
     private ActivityFoodBinding binding;
     private RcvFoodAdapter adapter;
+    private FoodModel selected;
+    private int selectedIndex;
 
     @Override
     public ViewBinding setBinding() {
@@ -77,19 +79,40 @@ public class FoodActivity extends BaseActivity implements IOnItemClickListener<F
         foodModel5.setPrice("29.90 ₺");
         adapter.add(foodModel5);
 
-        adapter.add(foodModel);
-        adapter.add(foodModel2);
-        adapter.add(foodModel3);
-
-
     }
 
     @Override
     public void onItemClicked(FoodModel item, int positon) {
-        item.setSelected(!item.isSelected());
         adapter.updateItem(item, positon);
+        selected = item;
+        selectedIndex = positon;
+        showNumberPicker();
 
     }
 
+    public void showNumberPicker() {
+        NumberPickerDialog newFragment = new NumberPickerDialog();
+        newFragment.setValueChangeListener(this);
+        newFragment.show(getSupportFragmentManager(), "NumberPickerDialog picker");
+    }
 
+    @Override
+    public void onValueChange(NumberPicker numberPicker, int i, int i1) {
+        if (i > 0) {
+            selected.setSelected(true);
+            DialogCreater.succesDialog(this, "" + i + " porsiyon " + selected.getName() + " " +
+                    "sepete eklendi");
+        } else {
+            if (selected.getCount() != 0) {
+                DialogCreater.succesDialog(this, selected.getName() + " sepetten çıkarıldı");
+            } else {
+               // DialogCreater.succesDialog(this, selected.getName() + " zaten sepette
+                // bulunmuyor");
+            }
+            selected.setSelected(false);
+        }
+
+        selected.setCount(i);
+        adapter.updateItem(selected, selectedIndex);
+    }
 }

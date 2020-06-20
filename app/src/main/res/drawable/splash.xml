@@ -3,11 +3,11 @@
 
     <item android:drawable="@color/colorPrimary" />
 
-    <!--<item>
+    <item>
         <bitmap
             android:gravity="center"
-            android:src="@color/colorPrimaryDark" />
-    </item>-->
+            android:src="@drawable/kiosk" />
+    </item>
 
 
 </layer-list>

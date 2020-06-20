@@ -10,6 +10,11 @@ public class FoodModel extends BaseModel {
     private String image;
     private String price;
     private String name;
+    private int count;
+    private boolean isSelected;
+
+    public FoodModel() {
+    }
 
     public String getName() {
         return name;
@@ -19,18 +24,12 @@ public class FoodModel extends BaseModel {
         this.name = name;
     }
 
-    private int count;
-    private boolean isSelected;
-
     public boolean isSelected() {
         return isSelected;
     }
 
     public void setSelected(boolean selected) {
         isSelected = selected;
-    }
-
-    public FoodModel() {
     }
 
     public int getId() {

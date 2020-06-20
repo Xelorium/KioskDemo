@@ -54,4 +54,5 @@ dependencies {
     implementation "io.reactivex.rxjava2:rxandroid:$rxJavaVersion"
     implementation "android.arch.lifecycle:extensions:$lifecyleExtensionVersion"
     implementation "com.google.android.material:material:$materialVersion"
+    implementation 'com.github.hamurcuabi:SweetDialoger:2.6.0'
 }
