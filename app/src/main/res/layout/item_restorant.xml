@@ -45,18 +45,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:layout_gravity="end"
-                android:id="@+id/txt_check"
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:layout_marginTop="6dp"
-                android:tint="#fff"
-                android:layout_marginEnd="6dp"
-                android:src="@drawable/ic_check_pin"
-                android:visibility="@{model.selected ? View.VISIBLE:View.GONE}"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
         </FrameLayout>
     </com.google.android.material.card.MaterialCardView>
 </layout>

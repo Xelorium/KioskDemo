@@ -41,6 +41,7 @@ public class FoodActivity extends BaseActivity implements IOnItemClickListener<F
         setRcvAdapter();
         prepareData();
         binding.fabMic.setOnClickListener(view -> goList());
+        binding.toolbarTitle.setText("Ürün Seçimi");
 
     }
 

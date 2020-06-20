@@ -26,6 +26,7 @@ public class HomeActivity extends BaseActivity implements IOnItemClickListener<R
     public void onLoad() {
         setRcvAdapter();
         prepareData();
+        binding.toolbarTitle.setText("Restorant Seçimi");
 
     }
 
