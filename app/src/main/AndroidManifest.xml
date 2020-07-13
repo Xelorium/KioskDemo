@@ -9,12 +9,11 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="Kiosk-Demo"
-        android:networkSecurityConfig="@xml/network_securty_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.food.FoodListActivity"></activity>
-        <activity android:name=".ui.home.HomeActivity"></activity>
+        <activity android:name=".ui.food.FoodListActivity"/>
+        <activity android:name=".ui.home.HomeActivity"/>
         <activity
             android:name=".ui.splash.SplashActivity"
             android:theme="@style/SplashTheme">
