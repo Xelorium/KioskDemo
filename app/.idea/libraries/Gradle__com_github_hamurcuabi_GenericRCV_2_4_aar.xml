@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.hamurcuabi:GenericRCV:2.4@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c9ff7b083aa1e2e98a16314c99348d36/jetified-GenericRCV-2.4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c9ff7b083aa1e2e98a16314c99348d36/jetified-GenericRCV-2.4/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.hamurcuabi/GenericRCV/2.4/909dfa0150be9531af038da90dd9ee1b6147a6a3/GenericRCV-2.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
