@@ -30,7 +30,7 @@ public class RcvFoodAdapter extends GenericAdapter<FoodModel,
     public RcvFoodViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         ItemFoodBinding binding = DataBindingUtil.inflate(
                 LayoutInflater.from(parent.getContext()),
-                R.layout.item_food, parent, false);
+               R.layout.item_food, parent, false);
         return new RcvFoodViewHolder(binding);
     }
 
