@@ -31,7 +31,7 @@ public class HomeActivity extends BaseActivity implements IOnItemClickListener<R
     }
 
     private void setRcvAdapter() {
-        GRVHelper.setResId(R.anim.layout_animation_fall_down);
+        GRVHelper.setResId(R.anim.layout_animation_from_right);
         rcvRestorantAdapter = new RcvRestorantAdapter(this, this, null);
         GRVHelper.setup(rcvRestorantAdapter, binding.rcvRestorant);
 
@@ -58,10 +58,16 @@ public class HomeActivity extends BaseActivity implements IOnItemClickListener<R
         testModel4.setName("SubWay");
         rcvRestorantAdapter.add(testModel4);
 
+        RestorantModel testModel5 = new RestorantModel();
+        testModel5.setImage("https://cdn.pixabay.com/photo/2017/03/27/13/54/bread-2178874_1280.jpg");
+        testModel5.setName("Çelik's Home");
+        rcvRestorantAdapter.add(testModel5);
         rcvRestorantAdapter.add(testModel3);
         rcvRestorantAdapter.add(testModel2);
         rcvRestorantAdapter.add(testModel4);
         rcvRestorantAdapter.add(testModel);
+        rcvRestorantAdapter.add(testModel2);
+
 
 
     }
